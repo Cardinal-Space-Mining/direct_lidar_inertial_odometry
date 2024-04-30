@@ -13,21 +13,21 @@
 /**:
   ros__parameters:
     use_sim_time: true
-    frames/odom: odom
-    frames/baselink: base_link
-    frames/lidar: lidar
-    frames/imu: imu
+    frames/odom: lidar      # odom
+    frames/baselink: world  # base_link
+    frames/lidar: lidar     # lidar
+    frames/imu: lidar       # imu
 
     map/waitUntilMove: true
     map/dense/filtered: false
     map/sparse/leafSize: 0.25
 
-    odom/gravity: 9.80665
+    odom/gravity: 0   # 9.80665
     odom/computeTimeOffset: true
 
     odom/imu/approximateGravity: false
-    odom/imu/calibration/gyro: true
-    odom/imu/calibration/accel: true
+    odom/imu/calibration/gyro: false    # true
+    odom/imu/calibration/accel: false   # true
     odom/imu/calibration/time: 3.0
     odom/imu/bufferSize: 5000
 
@@ -51,7 +51,7 @@
     odom/geo/Kp: 4.5
     odom/geo/Kv: 11.25
     odom/geo/Kq: 4.0
-    odom/geo/Kab: 2.25
+    odom/geo/Kab: 0.01    # 2.25
     odom/geo/Kgb: 1.0
     odom/geo/abias_max: 5.0
     odom/geo/gbias_max: 0.5
