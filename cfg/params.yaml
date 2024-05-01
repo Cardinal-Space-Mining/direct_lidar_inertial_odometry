@@ -13,16 +13,16 @@
 /**:
   ros__parameters:
     use_sim_time: true
-    frames/odom: lidar      # odom
+    frames/odom: odom      # odom
     frames/baselink: world  # base_link
     frames/lidar: lidar     # lidar
-    frames/imu: lidar       # imu
+    frames/imu: imu       # imu
 
     map/waitUntilMove: true
     map/dense/filtered: false
     map/sparse/leafSize: 0.25
 
-    odom/gravity: 0   # 9.80665
+    odom/gravity: 0.0   #9.80665
     odom/computeTimeOffset: true
 
     odom/imu/approximateGravity: false
@@ -51,7 +51,7 @@
     odom/geo/Kp: 4.5
     odom/geo/Kv: 11.25
     odom/geo/Kq: 4.0
-    odom/geo/Kab: 0.01    # 2.25
+    odom/geo/Kab: 2.25
     odom/geo/Kgb: 1.0
     odom/geo/abias_max: 5.0
     odom/geo/gbias_max: 0.5
